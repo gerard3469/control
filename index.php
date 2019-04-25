@@ -1,7 +1,7 @@
 <?php
 echo "conexion";
 
-$enlace = mysqli_connect("localhost", "mi_usuario", "mi_contraseña", "world");
+$enlace = mysqli_connect("mysql://mysql:3306/", "userMRA", "RIw4DP6FwQju05rD", "salon");
 
 /* comprobar la conexión */
 if (mysqli_connect_errno()) {
