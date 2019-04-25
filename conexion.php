@@ -5,7 +5,7 @@
  
 		public static function conectar(){
 			$pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-			self::$conexion= new PDO('mysql:host=salon:3306;dbname=sampledb','user','12345',$pdo_options);
+			self::$conexion= new PDO('mysql:172.30.125.213=:3306;dbname=sampledb','user','12345',$pdo_options);
 			return self::$conexion;
 		}		
 	}
