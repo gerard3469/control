@@ -35,13 +35,13 @@ require_once('conexion.php');
 			$crear = $db->prepare($sql);
 			$crear->execute();
 
-			$insert=$db->prepare('INSERT INTO alumnos values(NULL,:nombre,:app,:apm,:matricula)');
+			/*$insert=$db->prepare('INSERT INTO alumnos values(NULL,:nombre,:app,:apm,:matricula)');
 			$insert->bindValue('nombre',$alumno->getNombre());
 			$insert->bindValue('app',$alumno->getApellido_paterno());
 			$insert->bindValue('apm',$alumno->getApellido_materno());
 			$insert->bindValue('matricula',$alumno->getMatricula());
 			$insert->execute();
-
+			*/
 		}
 
 		// método para mostrar todos los alumnos
