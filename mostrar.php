@@ -5,7 +5,8 @@ require_once('alumno.php');
 $crud=new Crudalumno();
 $alumno= new alumno();
 //obtiene todos los alumnos con el método mostrar de la clase crud
-$listaalumnos=$crud->mostrar();
+//$listaalumnos=$crud->mostrar();
+$query=$crud->generar();
 ?>
 
 <html>

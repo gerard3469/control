@@ -9,6 +9,18 @@ require_once('conexion.php');
 		// método para insertar, recibe como parámetro un objeto de tipo alumno
 		public function insertar($alumno){
 			$db=Db::conectar();
+			$insert=$db->prepare('INSERT INTO alumnos values(NULL,:nombre,:app,:apm,:matricula)');
+			$insert->bindValue('nombre',$alumno->getNombre());
+			$insert->bindValue('app',$alumno->getApellido_paterno());
+			$insert->bindValue('apm',$alumno->getApellido_materno());
+			$insert->bindValue('matricula',$alumno->getMatricula());
+			$insert->execute();
+			
+		}
+
+		//método para construir tablas 
+		public function generar(){
+			$db=Db::conectar();
 			$sql=<<<EOD
 				CREATE DATABASE IF NOT EXISTS salon;
  
@@ -31,17 +43,7 @@ require_once('conexion.php');
 				ALTER TABLE `alumnos`
   				MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 			EOD;
-
-			$crear = $db->prepare($sql);
-			$crear->execute();
-
-			/*$insert=$db->prepare('INSERT INTO alumnos values(NULL,:nombre,:app,:apm,:matricula)');
-			$insert->bindValue('nombre',$alumno->getNombre());
-			$insert->bindValue('app',$alumno->getApellido_paterno());
-			$insert->bindValue('apm',$alumno->getApellido_materno());
-			$insert->bindValue('matricula',$alumno->getMatricula());
-			$insert->execute();
-			*/
+			$ejecutar=$db->query($sql);
 		}
 
 		// método para mostrar todos los alumnos
