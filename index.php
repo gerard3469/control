@@ -22,7 +22,7 @@
 				ALTER TABLE `alumnos`
   				MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 			EOD;
-		if($db->query($sql)){
+		if($db->query($sql)===true){
 
 				echo "base de datos creada extosamente"
 		} else {
