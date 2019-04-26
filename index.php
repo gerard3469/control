@@ -1,8 +1,7 @@
 <?php
-	echo "string";
+	require_once('conexion.php');
 	$db=Db::conectar();
 			$sql=<<<EOD
- 
 				USE salon;
 				CREATE TABLE `alumnos` (
   					`id` int(11) NOT NULL,
@@ -24,9 +23,9 @@
 			EOD;
 		if($db->query($sql)===true){
 
-				echo "base de datos creada extosamente"
+				echo "base de datos creada extosamente";
 		} else {
-				echo "no se pudo crear" 
+				echo "no se pudo crear" ;
 		}
 
 ?>
