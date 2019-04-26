@@ -14,7 +14,7 @@ class  Db{
  
 		public static function conectar(){
 			$pdo_options[PDO::ATTR_ERRMODE]=PDO::ERRMODE_EXCEPTION;
-			self::$conexion= new PDO('mysql:host=mysql:3306;dbname=salon',$username,$password,$pdo_options);
+			self::$conexion= new PDO('mysql:host=mysql:3306;dbname=salon','userMRA','RIw4DP6FwQju05rD',$pdo_options);
 			return self::$conexion;
 		}		
 	}
