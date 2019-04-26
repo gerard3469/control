@@ -22,7 +22,7 @@
 							<td><input type='text' name='app' class="form-control" placeholder="Apellido paterno"></td>
 						</tr>
 						<tr>
-							<td><h5>Apellido paterno:</h5></td>
+							<td><h5>Apellido materno:</h5></td>
 							<td><input type='text' name='apm' class="form-control" placeholder="Apellido materno"></td>
 						</tr>
 						<tr>
