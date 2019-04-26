@@ -1,13 +1,15 @@
 <?php
-$servername = "mysql:3306";
-$database = "salon";
-$username = "userMRA";
-$password = "RIw4DP6FwQju05rD";
-$ur="root";
-$pasr= "7FX3BtPqUOttX4iF";
+
 
 class  Db{
+
 		private static $conexion=NULL;
+		$servername = "mysql:3306";
+		$database = "salon";
+		$username = "userMRA";
+		$password = "RIw4DP6FwQju05rD";
+		$ur="root";
+		$pasr= "7FX3BtPqUOttX4iF";
 		private function __construct (){}
  
 		public static function conectar(){
