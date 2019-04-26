@@ -10,31 +10,42 @@
 <html>
 <head>
 	<title>Actualizar Alumno</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-	<form action='administrar_alumno.php' method='post'>
-	<table>
-		<tr>
-			<input type='hidden' name='id' value='<?php echo $alumno->getId()?>'>
-			<td>Nombre:</td>
-			<td> <input type='text' name='nombre' value='<?php echo $alumno->getNombre()?>'></td>
-		</tr>
-		<tr>
-			<td>Apellido Paterno:</td>
-			<td><input type='text' name='app' value='<?php echo $alumno->getApellido_paterno()?>' ></td>
-		</tr>
-		<tr>
-			<td>Apellido Materno:</td>
-			<td><input type='text' name='apm' value='<?php echo $alumno->getApellido_materno() ?>'></td>
-		</tr>
-		<tr>
-			<td>Matricula:</td>
-			<td><input type='number' name='matricula' value='<?php echo $alumno->getMatricula() ?>'></td>
-		</tr>
-		<input type='hidden' name='actualizar' value='actualizar'>
-	</table>
-	<input type='submit' value='Guardar'>
-	<a href="index.php">Volver</a>
-</form>
+
+	<div class="container"><br>
+		<div class="row">
+			<div class="col-4 bg-dark text-white">
+				<h1>Actualizar datos</h1>
+				<form action='administrar_alumno.php' method='post'>
+					<table class="text-white">
+						<tr>
+							<input type='hidden' name='id'  value='<?php echo $alumno->getId()?>'>
+							<td><h5>Nombre:</h5></td>
+							<td> <input type='text' name='nombre' class="form-control" value='<?php echo $alumno->getNombre()?>'></td>
+						</tr>
+						<tr>
+							<td><h5>Apellido Paterno:</h5></td>
+							<td><input type='text' name='app' class="form-control" value='<?php echo $alumno->getApellido_paterno()?>' ></td>
+						</tr>
+						<tr>
+							<td><h5>Apellido Materno:</h5></td>
+							<td><input type='text' name='apm' class="form-control" value='<?php echo $alumno->getApellido_materno() ?>'></td>
+						</tr>
+						<tr>
+							<td><h5>Matricula:</h5></td>
+							<td><input type='number' name='matricula' class="form-control" value='<?php echo $alumno->getMatricula() ?>'></td>
+						</tr>
+						<input type='hidden' name='actualizar' value='actualizar'>
+					</table> <br>
+					<input type='submit' class="btn btn-success btn-block" value='Guardar'>
+					<a href="index.php" class="btn btn-secondary btn-block"> <i class="fas fa-arrow-left"></i>Volver</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 </body>
 </html>
